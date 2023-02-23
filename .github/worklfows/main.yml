@@ -1,4 +1,4 @@
-name: Terraform Apply Test
+name: Terraform Apply
 
 on: [push]
 
@@ -9,7 +9,7 @@ on: [push]
   #  branches: [ "master" ]
 
 # Allows you to run this workflow manually from the Actions tab
-on: workflow_dispatch:
+#on: workflow_dispatch:
 
 jobs:
   terraform_apply:
