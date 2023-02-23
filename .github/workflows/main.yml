@@ -1,6 +1,6 @@
 name: Terraform Apply
 
-on: [push]
+on: [push, workflow_dispatch]
 
   # Triggers the workflow on push or pull request events but only for the "master" branch
   #push:
@@ -9,7 +9,7 @@ on: [push]
   #  branches: [ "master" ]
 
   # Allows you to run this workflow manually from the Actions tab
-on: workflow_dispatch
+  #  workflow_dispatch
 
 jobs:
   terraform_apply:
