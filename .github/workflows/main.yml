@@ -1,6 +1,8 @@
 name: Terraform Apply
 
 on:
+  push:
+
   workflow_dispatch:
 
 env:
@@ -25,7 +27,7 @@ defaults:
 
 jobs:
   terraform_apply:
-    name: 'Terraform'
+    - name: 'Terraform'
     runs-on: ubuntu-latest
 
     steps:
