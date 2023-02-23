@@ -1,9 +1,9 @@
 name: Terraform Apply
 
 on:
-  push
+  push:
 
-  workflow_dispatch
+  workflow_dispatch:
 
   # Triggers the workflow on push or pull request events but only for the "master" branch
   #push:
