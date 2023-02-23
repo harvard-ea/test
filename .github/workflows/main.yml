@@ -1,5 +1,8 @@
 name: Terraform Apply
+
 on:
+  push:
+
   workflow_dispatch:
 
 env:
@@ -16,9 +19,9 @@ env:
   
 
 # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
-#defaults:
-#  run:
-#    shell: bash
+defaults:
+  run:
+    shell: bash
 
 
 
@@ -30,7 +33,7 @@ jobs:
     steps:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
-    - uses: actions/checkout@v3
+      uses: actions/checkout@v3
 
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
