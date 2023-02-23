@@ -3,6 +3,9 @@ name: Terraform Apply
 on:
   workflow_dispatch:
 
+env:
+  AWS_REGION: us-east-1
+
   # Triggers the workflow on push or pull request events but only for the "master" branch
   #push:
   #  branches: [ "master" ]
@@ -11,17 +14,18 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   #  workflow_dispatch
+  #
+# Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
+defaults:
+  run:
+    shell: bash
+
+
 
 jobs:
   terraform_apply:
     name: 'Terraform'
     runs-on: ubuntu-latest
-
-    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
-    defaults:
-      run:
-        shell: bash
-
 
     steps:
     # Checkout the repository to the GitHub Actions runner
