@@ -24,7 +24,7 @@ provider "aws" {
 ####################################################
 
 module "s3" {
-  source = "modules/s3"
+  source = "./modules/s3"
   org_prefix = "ea"
   bucket_name = "dkfghejsllg-bucket-blah"
   tags = {
